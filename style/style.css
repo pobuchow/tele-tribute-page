@@ -1,119 +1,207 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap");
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 html {
-    font-size: 10px;
-    font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-.container{
-    min-height: 100vh;
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+p {
+  color: #d9d7cc;
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main {
+  background-image: url(./../img/1966_Fender_Telecaster_body.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0d0d0d;
+  opacity: 0.3;
+  z-index: -1;
+}
+#main .main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+
+#main h1 {
+  display: block;
+  width: max-content;
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal 0.5s ease forwards;
+  animation-delay: 1s;
+}
+#main h1:nth-child(1) {
+  animation-delay: 1s;
+}
+#main h1:nth-child(2) {
+  animation-delay: 2s;
+}
+#main h1:nth-child(3) {
+  animation: text_reveal_page 0.5s ease forwards;
+  animation-delay: 3s;
+}
+#main h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #735a0e;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 0.3s;
+}
+#main h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+#main h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+#main h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+#main .cta {
+  display: inline-block;
+  padding: 10px 30px;
+  color: #d9d7cc;
+  background-color: transparent;
+  border: 2px solid #735a0e;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 36px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+}
+#main .cta:hover {
+  color: #d9d7cc;
+  background-color: #735a0e;
+}
+.container-img a {
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #d9d7cc;
+}
+#history .history {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#history .section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #0d0d0d;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  text-align: center;
+}
+#history .section-title span {
+  color: #735a0e;
+}
+
+#history .history-top p {
+  color: #735a0e;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-size: 300;
+  letter-spacing: 0.05rem;
+  padding: 0 50px;
+}
+#history .history-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+#history .history-item {
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url(./../img/782px-Fender_Telecaster_American_Vintage_52_RI_headstock.jpg);
+  background-size: cover;
+  margin: 10px 5%;
+  position: relative;
+  z-index: 1;
+}
+#history .history-item h2 {
+  color: #d9d7cc;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#history .history-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0d0d0d;
+  opacity: 0.6;
+  border-radius: 10px;
+  z-index: -1;
+}
+@keyframes text_reveal_box {
+  50% {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#main{
-    background-image: url(./../img/1966_Fender_Telecaster_body.jpg);
-    background-size: cover;
-    background-position: top center;
-    position: relative;
-    z-index: 1;
-}
-#main::after{
-    content: '';
-    position: absolute;
     left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #0D0D0D;
-    opacity: .3;
-    z-index: -1;
-}
-#main .main{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 50px;
-    justify-content: flex-start;
-}
-#main h1{
-    display: block;
-    width: max-content;
-    font-size: 4rem;
-    position: relative;
-    color: transparent;
-    animation: text_reveal 0.5s ease forwards;
-    animation-delay: 1s;
-}
-#main h1:nth-child(1){
-    animation-delay: 1s;
-}
-#main h1:nth-child(2){
-    animation-delay: 2s;
-}
-#main h1:nth-child(3){
-    animation: text_reveal_page .5s ease forwards;
-    animation-delay: 3s;
-}
-#main h1 span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+  }
+  100% {
     width: 0;
-    background-color: #735A0E;
-    animation: text_reveal_box 1s ease;
-    animation-delay: 0.3s;
+    left: 100%;
+  }
 }
-#main h1:nth-child(1) span{
-    animation-delay: 0.5s;
+@keyframes text_reveal {
+  100% {
+    color: #d9d7cc;
+  }
 }
-#main h1:nth-child(2) span{
-    animation-delay: 1.5s;
-}
-#main h1:nth-child(3) span{
-    animation-delay: 2.5s;
-}
-#main .cta{
-    display: inline-block;
-    padding: 10px 30px;
-    color: #D9D7CC;
-    background-color: transparent;
-    border: 2px solid #735A0E;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    margin-top: 36px;
-    transition: .3s ease;
-    transition-property:  background-color, color;
-}
-#main .cta:hover{
-    color: #D9D7CC;
-    background-color: #735A0E;
-}
-@keyframes text_reveal_box{
-    50%{
-        width: 100%;
-        left: 0;
-    }
-    100%{
-        width: 0;
-        left: 100%;
-    }
-}
-@keyframes text_reveal{
-    100%{
-        color: #D9D7CC;
-    }
-}
-@keyframes text_reveal_page{
-    100%{
-        color: #735A0E;
-    }
+@keyframes text_reveal_page {
+  100% {
+    color: #735a0e;
+  }
 }
