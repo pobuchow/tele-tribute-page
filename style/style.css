@@ -17,10 +17,11 @@ img {
   object-fit: cover;
 }
 p {
-  color: #d9d7cc;
+  color: #0d0d0d;
   text-align: left;
   font-size: 1.4rem;
   line-height: 1.9rem;
+  margin-bottom: 10px;
 }
 .container {
   min-height: 100vh;
@@ -167,7 +168,7 @@ p {
   z-index: 1;
 }
 #history .history-item h2 {
-  color: #d9d7cc;
+  color: #0d0d0d;
   font-size: 2rem;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -179,8 +180,8 @@ p {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #0d0d0d;
-  opacity: 0.6;
+  background-color: #d9d7cc;
+  opacity: 0.8;
   border-radius: 10px;
   z-index: -1;
 }
