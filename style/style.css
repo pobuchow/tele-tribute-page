@@ -123,7 +123,7 @@ p {
   margin: 0 auto;
   padding: 100px 0;
 }
-#history .section-title {
+.section-title {
   font-size: 4rem;
   font-weight: 300;
   color: #0d0d0d;
@@ -132,10 +132,9 @@ p {
   letter-spacing: .2rem;
   text-align: center;
 }
-#history .section-title span {
+.section-title span {
   color: #735a0e;
 }
-
 #history .history-top p {
   color: #735a0e;
   font-size: 1.4rem;
@@ -185,6 +184,69 @@ p {
   border-radius: 10px;
   z-index: -1;
 }
+#guitarists .guitarists{
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0; 
+}
+#guitarists .guitarists-header h1{
+  margin-bottom: 50px;
+}
+#guitarists .guitarists-all{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#guitarists .guitarist{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#guitarists .guitarist-info{
+  padding: 30px;
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  color: #0d0d0d;
+  background-color: #d9d7cc;
+}
+#guitarists .guitarist-info h1{
+  font-size: 4em;
+  font-weight: 500;
+  color: #0d0d0d;
+}
+#guitarists .guitarist-info p{
+  color: #0d0d0d;
+}
+#guitarists .guitarist-img{
+  overflow: hidden;
+  position: relative;
+}
+
+#guitarists .guitarist-img::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0d0d0d;
+  opacity: 0.6;
+  animation: img_hide 0.5s ease forwards;
+}
+#guitarists .guitarist:hover .guitarist-img::after{
+  animation: img_reveal 0.5s ease forwards;
+}
 @keyframes text_reveal_box {
   50% {
     width: 100%;
@@ -203,5 +265,18 @@ p {
 @keyframes text_reveal_page {
   100% {
     color: #735a0e;
+  }
+}
+@keyframes img_reveal {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes img_hide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
   }
 }
